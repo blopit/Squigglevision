@@ -1,0 +1,52 @@
+<html>
+<head>
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="./node_modules/save-svg-as-png/saveSvgAsPng.js"></script>
+
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup,
+  menu, nav, section { display: block; }
+</style>
+</head>
+<body>
+  <input type='file' onchange="readURL(this);" />
+
+<svg id="whole" height="512" width="1536" >
+
+  <filter id="turbulence-1">    <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" data-filterId="3" />    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="10" />  </filter>
+
+  <filter id="turbulence-2">    <feTurbulence type="fractalNoise" baseFrequency="0.075" numOctaves="2" data-filterId="3" />    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="10" />  </filter>
+
+  <filter id="turbulence-3">    <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="2" data-filterId="3" />    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="10" />  </filter>
+
+  <filter id="turbulence-4">    <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" data-filterId="3" />    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="5" />  </filter>
+
+  <filter id="turbulence-5">    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" data-filterId="3" />    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="5" />
+
+
+</filter>
+
+<image id="source1" xlink:href="#" x="0" y="0" style="filter: url(#turbulence-1)" transform=""/>
+<image id="source2" xlink:href="#" x="512" y="0" style="filter: url(#turbulence-2)" transform=""/>
+<image id="source3" xlink:href="#" x="1024" y="0" style="filter: url(#turbulence-3)" transform=""/>
+
+</svg>
+
+<div>
+</div>
+
+
+
+
+
+</body>
+<link rel="stylesheet" type="text/css" href="style.css">
+</html>
